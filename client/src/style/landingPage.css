@@ -1,0 +1,14 @@
+.gbloc{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   padding: 70px 50px ;
+}
+
+.pbloc{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}

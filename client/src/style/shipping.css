@@ -1,0 +1,54 @@
+.Container{
+    margin: 50px auto;
+    width:550px;
+    height: 600px;
+    border-top: 3px solid #dda15e;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;;
+}
+
+.ship{
+    display: flex;
+    flex-direction: column;
+ 
+}
+.products{
+    margin-bottom: 20px;
+    background-color: #fefae0;
+}
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    
+}
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+
+.row{
+    margin: 20px;
+}
+.adresse{
+    margin:10px
+}
+#Adresse{
+    
+    width: 530px;
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+.btnship{
+    margin-top:10px ;
+    width:530px;
+    height: 30px;
+    background-color: #dda15e;
+    border-radius: 5px;
+}
