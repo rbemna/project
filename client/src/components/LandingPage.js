@@ -6,9 +6,11 @@ const LandingPage = () => {
   return (
     <div>
       <HomeCarousel/>
+    
+      
       <div  className="gBloc"  style={{textAlign: "center", padding:"50px"
 }}>
-        <h1> Comment ça marche</h1>
+        <h1 style={{fontFamily:"Arial, Helvetica, sans-serif", textTransform:"uppercase"}}>  comment ça marche</h1>
         <div className="pbloc">
         <div className="bloc">
           <img src="https://food.jumia.com.tn/images/how-it-works-2.svg?v=1596116892" alt="chooseproduct" />
@@ -28,8 +30,10 @@ const LandingPage = () => {
         </div>
      
       </div> 
-    
+
       <AllProducts/>
+   
+    {/* <Footer/> */}
          
     
     </div>

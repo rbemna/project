@@ -40,7 +40,7 @@ const ProvidersList = ({history}) => {
               {providers.map((provider) => (
                 <tr>
                   {/* <td class="text-center">{product._id}</td> */}
-                  <td>{provider.firstName}</td>
+                  <td>{provider.fullName}</td>
                   <td>{provider.email}</td>
                   <td>{provider.adresse}</td>
                   <td class="text-right">{provider.phone}</td>

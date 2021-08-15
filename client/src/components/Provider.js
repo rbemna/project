@@ -7,12 +7,18 @@ import { editUser} from "../redux/actions/userActions";
 import "../style/provider.css";
 import { addProduct, getMyProducts} from "../redux/actions/productActions";
 import MyProductList from "./MyProductList";
+import { getProviderOrders } from "../redux/actions/orderActions";
+import ProviderOrders from "./ProviderOrders";
 
 const Provider = () => {
   const user = useSelector((state) => state.userReducer.users);
-
+  console.log("user id", user._id)
   const myproducts = useSelector((state) => state.productReducer.myProducts);
-  // const {users,errors,message,load}=updateUser
+  const myOrders= useSelector((state) => state.order.myorders);
+
+  console.log("my orders", myOrders)
+ 
+
   const dispatch = useDispatch();
 
   const [newUser, setNewUser] = useState(user);
@@ -44,6 +50,7 @@ const Provider = () => {
   };
   useEffect(() => {
     dispatch(getMyProducts());
+    dispatch(getProviderOrders())
   }, [dispatch]);
    
   
@@ -83,7 +90,7 @@ const Provider = () => {
         </nav>
 
         <div className="row">
-          <div className="col-lg-4">
+          <div className="col-lg-3">
             <div className="carddd">
               <div className="card-body">
                 <div className="d-flex flex-column align-items-center text-center">
@@ -213,7 +220,7 @@ const Provider = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-8">
+          <div className="col-lg-9">
             <div className="carddd">
               <div className="card-body">
                 <div className="menu" style={{ backgroundColor: "#606c38" ,borber:"2px solid black"}}>
@@ -322,9 +329,9 @@ const Provider = () => {
                     <thead>
                         <tr>
                            
-                            <th>Name</th>
-                            <th>Category</th>
-                            <th>price</th>
+                            <th>Produit</th>
+                            <th>Categorie</th>
+                            <th>Prix (DT)</th>
                             <th >Description</th>
                             <th>Actions</th>
                         </tr>
@@ -340,6 +347,63 @@ const Provider = () => {
           
                 
         </div>
+
+
+        {/* ***************************************************************************************** */}
+
+
+        <div className="card-body">
+                <div className="menu" style={{ backgroundColor: "#606c38" ,borber:"2px solid black"}}>
+                  <div style={{display:"flex",flexDirection:"row"}}>
+                    <h4 style={{ color: "#fefae0" }}>Mes orders {" "} </h4>
+                    
+                  </div>
+                  
+                </div>
+
+               
+
+                {/* <div class="tabProduct" > */}
+    	
+    
+            {/* <div className="tab" style={{padding:"10px", border:"2px solid red"}}> */}
+                <div className="table-responsive">
+                <table className="table">
+                    <thead>
+                        <tr>
+                        
+                        <th>Date</th>
+                            <th>Produit</th>
+                            <th>Prix(DT)</th>
+                            <th >Quantité</th>
+                            <th>Total(DT)</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {myOrders.length ?
+              myOrders.map((el) => <ProviderOrders el={el} key={el._id} />)
+              :<h1>vous n'avez pas des commandes</h1>
+                 
+              }
+            </tbody>
+            </table>
+                </div>
+                {/* </div> */}
+                {/* </div> */}
+             
+                
+
+          
+                
+        </div>
+
+
+
+
+
+        {/* ******************************************************************************************************** */}
       </div>
       </div>
       </div>

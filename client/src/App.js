@@ -43,7 +43,7 @@ const products = useSelector(state => state.productReducer.products)
      
      
         <Route path="/user/client" component={Client}/>
-        <Route path="/user/provider" component={Provider}/> 
+        <Route path="/user/Fournisseur" component={Provider}/> 
         <Route path="/user/admin" component={Admin}/>
         <Route path="/providers" component={ProvidersList}/>
         <Route path="/clients" component={Clients}/>

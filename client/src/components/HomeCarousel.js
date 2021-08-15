@@ -13,6 +13,18 @@ const HomeCarousel = () => {
       alt="First slide"
     />
   </Carousel.Item>
+
+  <Carousel.Item>
+  <div class="container">
+  <img
+      className="d-block w-100"
+      style={{borderRadius:"0px"}}
+      src="https://mountik.com/c/63-category_default/fruits-secs-en-tunisie.jpg"
+      alt="Third slide"
+   
+    />
+     </div>
+  </Carousel.Item>
   
   <Carousel.Item>
   <div class="container">

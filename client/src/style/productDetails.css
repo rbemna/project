@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
+/* @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
  * {
 	 box-sizing: border-box;
 }
  body {
 	
-	 font-family: "Raleway";
+	 
 }
  body .cardDetail {
 	 width: 800px;
@@ -12,17 +12,17 @@
 	 background: white;
 	 margin: 25px auto;
 	 top: 50%;
-	 left: 30%;
+	 left: font-family: "Raleway";30%;
 	 transform: translate(-50%, -50%);
 	 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	 transition: all 0.3s;
      display: flex;
      flex-direction: row;
-}
+} */
 /* body .cardDetail:hover {
 	 box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 } */
-
+/* 
 body .cardImg{
 display: flex;
 flex-direction: column;
@@ -108,4 +108,62 @@ flex-direction: column;
 	 color: #aedaa6;
 	 cursor: pointer;
 }
- 
+  */
+
+
+  .prod-det{
+	  display: flex;
+	  justify-content: space-between;
+	  /* border:2px solid  rgb(216, 221, 231); */
+	  margin-left: 50px;
+	  padding:15px
+
+  }
+  /* .bloc-img{
+	  border: 1px solid rgb(0, 19, 128);
+	  width: 600px;
+	  height: 600px;
+  } */
+  .productImg{
+	border: 1px solid rgb(219, 245, 219);
+	max-width: 600px;
+    height: 600px;
+  }
+  .bloc-details{
+	width: 600px;
+	height: 600px;
+	display:flex;
+	flex-direction: column;
+	padding:70px 50px;
+}
+
+
+.bloc-details h1{
+	font-family:  Georgia, serif;
+}
+
+.btndet{
+border: none;
+background-color: #dda15e;
+}
+
+
+nav {
+	width: 100%;
+	color: #727272;
+	text-transform: uppercase;
+	padding: 20px;
+	font-size: 12px;
+}
+
+
+nav svg.arrow {
+	float: left;
+	height: 15px;
+	width: 15px;
+	margin-right: 10px;
+}
+
+.divbtn{
+	padding-top: 200px;
+}

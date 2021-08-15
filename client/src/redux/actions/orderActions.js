@@ -94,3 +94,45 @@ export const createOrder = (orderItems,shippingAddress,totalPrice) => async (dis
       type: "UPDATE_PRICE_ORDER"
     };
   };
+
+  export const deleteOrder = (id) => async (dispatch) => {
+    try {
+        const config = {
+            headers: {
+                authorization: localStorage.getItem("token"),
+            },
+        };
+        const {data} = await axios.delete(`/api/order/${id}` ,config);
+        dispatch({
+            type: "DELETE_ORDER",
+            payload:data.order,
+        });
+        dispatch(getOrders())
+    } catch (error) {
+        dispatch({
+            type: "FAILED_ORDER",
+            payload: error.response.data.errors,
+        });
+    }
+  };
+
+
+  export const updateOrder = (id, newOrder) => async (dispatch) => {
+    try {
+      const config = {
+        headers: {
+          authorization: localStorage.getItem("token"),
+        },
+      };
+      const { data } = await axios.put(`/api/order/${id}`, newOrder, config);
+      dispatch({
+        type: "UPDATE_ORDER",
+        payload: data.order,
+      });
+    }catch (error) {
+        dispatch({
+            type: "FAILED_ORDER",
+            payload: error.response.data.errors,
+        });
+    }
+  };

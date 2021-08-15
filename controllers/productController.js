@@ -2,7 +2,7 @@ const Product = require("../models/ProductModel");
 
 exports.getAllProducts = async (req, res) => {
   try {
-    const allProducts = await Product.find();
+    const allProducts = await Product.find().populate('provider', 'email');
     res.send({ message: "mes produits séléctionnés ", product: allProducts });
   } catch (error) {
     res.status(500).send({

@@ -69,3 +69,33 @@ exports.addOrderItems =async (req, res) => {
     }
   }
 
+
+exports.deleteOrder = async (req, res) => {
+  try {
+    const order=await Order.findOne({_id:req.params.id})
+    if(!order){
+      return res.send({msg:"Order doesn't exist"})
+    }
+     await Order.deleteOne({_id:req.params.id})
+    res.send({msg:"Order deleted successfully",order});
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+}
+
+
+
+exports.updateOrderStatus = async (req, res) => {
+  try {
+    await Order.findOneAndUpdate(
+      { _id: req.params.id },
+      { $set: { ...req.body } }
+    );
+    const order = await Order.findOne({ _id: req.params.id });
+    res.send({ mesage: "the order is updated", order });
+  } catch (error) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+};

@@ -1,4 +1,4 @@
-
+/* 
 
 
 
@@ -10,28 +10,32 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #606c38;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
+    border: 5px solid green;
     border-radius: .1875rem;
     width:300px;
     height: 400px;
+    padding:0px
 
 }
 
 .card-img-actions {
-    position: relative
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    border:3px solid red;
 }
-
 .card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 1.25rem;
-    text-align: center
-}
+    
+    text-align: center;
+ border: 2px solid blue;
+} 
 
 .card-img {
-    width: 350px
+
+    width: 100%;
+    height: 100%;
+    border: 2px solid green
 }
 
 
@@ -56,4 +60,66 @@
 
 a {
     text-decoration: none !important
+} */
+
+
+.countries {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    
+    
+    
+}
+.country{
+    border: 1px solid rgb(235, 232, 232);
+    border-radius: 5px;
+    background-color:white;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 300px;
+    height: 400px;
+   
+}
+.country:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(209, 196, 196, 0.19);
+}
+
+
+.imageprod {
+    max-width: 100%;
+    height: 80%;
+
+  
+}
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+.bottom p span{
+    font-weight: bold;
+    color:rgb(235, 232, 232); 
+}
+.prodDet{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+.butProd{
+    height: 32px;
+    border: 2px solid #dda15e;
+    background-color:white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 10px;
+    line-height: 1em;
+    color: rgb(12, 12, 12);
+    font-weight: bold;
+    letter-spacing: .04em;
+    transition: all .2s ease 0s;
 }

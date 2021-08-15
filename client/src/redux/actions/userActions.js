@@ -25,7 +25,7 @@ import {REGISTER_USER_REQUEST, REGISTER_USER_SUCCESS, REGISTER_USER_FAIL,
                     history.push("/user/client")
             }
            if(result.data.user.role === 'Fournisseur'){
-                    history.push("/user/provider")
+                    history.push("/user/Fournisseur")
                 }
             
           

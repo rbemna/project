@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import { useSelector,useDispatch } from 'react-redux';
-import { getOrders } from '../redux/actions/orderActions';
+import { deleteOrder, getOrders } from '../redux/actions/orderActions';
 
 const Orders = ({history}) => {
     const orders = useSelector((state) => state.order.orders);
@@ -9,11 +9,11 @@ const Orders = ({history}) => {
     useEffect(() => {
       dispatch(getOrders());
     }, [dispatch]);
-    // const deleteHandler = (id) => {
-    //   if (window.confirm("Are you sure")) {
-    //     dispatch(deleteUser(id));
-    //   }
-    // };
+    const deleteHandler = (id) => {
+      if (window.confirm("Are you sure?")) {
+        dispatch(deleteOrder(id));
+      }
+    };
     return (
       <div class="tabPorvider">
         <div>
@@ -51,8 +51,8 @@ const Orders = ({history}) => {
                         className="btnPro"
                         data-original-title=""
                         title="supprimer produit"
-                        //   onClick={() => deleteHandler(order._id)
-                        // }
+                          onClick={() => deleteHandler(order._id)
+                        }
                       >
                         <i class="far fa-trash-alt"></i>
                       </button>

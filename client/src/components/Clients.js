@@ -40,7 +40,7 @@ const Clients = ({history}) => {
             <tbody>
               {clients.map((client) => (
                 <tr>
-                  <td>{client.firstName}</td>
+                  <td>{client.fullName}</td>
                   <td>{client.email}</td>
                   <td>{client.adresse}</td>
                   <td class="text-right">{client.phone}</td>

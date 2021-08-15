@@ -6,6 +6,7 @@ import ProductCard from "./ProductCard";
 import "../style/allProducts.css";
 const AllProducts = () => {
   const products = useSelector((state) => state.productReducer.products);
+  
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -13,12 +14,14 @@ const AllProducts = () => {
   }, [dispatch]);
   return (
     <div className="offres">
-      <h1>Nos offres</h1>
+      <h1>A LA UNE</h1>
         <div className="allprod">
         {products.map((product) => (
           <ProductCard key={product._id} product={product} />
         ))}
      </div>
+    
+
     </div>
   );
 };

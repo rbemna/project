@@ -204,10 +204,10 @@ const [show, setShow] = useState(false);
         </div>
               </div>
               <div className="tab-2">
-                <label for="tab2-2">Mon compte</label>
+              
                 <input id="tab2-2" name="tabs-two" type="radio" />
                 <div>
-                  <h4>Tab mon compte</h4>
+                  {/* <h4>Tab mon compte</h4> */}
                   
                 </div>
               </div>
