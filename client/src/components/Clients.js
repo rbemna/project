@@ -20,7 +20,7 @@ const Clients = ({history}) => {
           <div class="tabClient">
             <div>
               <a href="#back" onClick={history.goBack}>
-                Back
+                Retour
               </a>
             </div>
       

@@ -20,6 +20,7 @@ import Resume from "./components/Resume";
 
 import PrivateRoute from "./components/PrivateRoute";
 import Orders from "./components/Orders";
+import AllProducts from "./components/AllProducts";
 
 
 function App() {
@@ -36,11 +37,13 @@ const products = useSelector(state => state.productReducer.products)
       <Switch>
 
         <Route exact path="/" component={LandingPage} />
+        <Route path="/allProducts" component={AllProducts}/>
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/products" component={Products}/>
         <Route exact path="/productDetails/:id" component={ProductDetails}/>
-     
+       
+
      
         <Route path="/user/client" component={Client}/>
         <Route path="/user/Fournisseur" component={Provider}/> 

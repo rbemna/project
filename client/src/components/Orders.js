@@ -18,7 +18,7 @@ const Orders = ({history}) => {
       <div class="tabPorvider">
         <div>
           <a href="#back" onClick={history.goBack}>
-            Back
+            Retour
           </a>
         </div>
   

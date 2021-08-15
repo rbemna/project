@@ -19,8 +19,8 @@ const ProvidersList = ({history}) => {
     <div class="tabPorvider">
       <div>
         <a href="#back" onClick={history.goBack}>
-          Back
-        </a>
+         Retour
+                 </a>
       </div>
 
       <h2>Liste des fournisseurs</h2>

@@ -1,7 +1,8 @@
 import React from "react";
 import HomeCarousel from "./HomeCarousel";
 import "../style/landingPage.css"
-import AllProducts from "./AllProducts";
+import ALaUne from "./ALaUne";
+import Footer from "./Footer";
 const LandingPage = () => {
   return (
     <div>
@@ -31,9 +32,9 @@ const LandingPage = () => {
      
       </div> 
 
-      <AllProducts/>
+      <ALaUne/>
    
-    {/* <Footer/> */}
+    <Footer/>
          
     
     </div>
